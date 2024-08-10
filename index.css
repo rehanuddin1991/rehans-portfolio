@@ -1,0 +1,208 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+
+ }
+
+ .skills li {
+     padding: 7px 0px;
+     text-align: left;
+ }
+
+ .skills :nth-child(even) {
+     color: ghostwhite;
+ }
+
+ .skills :nth-child(odd) {
+     color: blanchedalmond;
+ }
+
+ .open-sans-normal2 {
+     font-family: "Open Sans", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 500;
+     font-style: normal;
+     font-variation-settings:
+         "wdth" 100;
+ }
+
+
+ .container {
+     height: 100vh;
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);
+      
+
+     grid-template-areas: "m h h h md c" "m f f f md c" "m f f f md c" "img img img img img img" '. ft ft ft ft .';
+     gap: 2px 3px;
+ }
+
+ .contact_list li:nth-child(even)
+ {
+    color:blanchedalmond;
+ }
+  
+
+ header {
+     grid-area: h;
+     background-color: darkcyan;
+     color: blanchedalmond;
+      
+ }
+
+ .skills_head {
+     color: navy;
+ }
+
+ .cont {
+     grid-area: f;
+     background-color: beige;
+     color: black;
+     overflow: auto;
+ }
+
+ .gallery_images_div {
+     grid-area: img;
+     display: grid;
+      
+     justify-content: space-between;
+     align-content: space-between;
+     align-items: center;
+     justify-items: center;
+     grid-template-columns: 1fr 1fr 1fr;
+     margin-top: 10px;
+ }
+
+ .gallery_img
+ {
+    width:300px;height: 190px;
+    border-radius: 7px;
+     
+ }
+
+ .gallery_img:hover
+ {
+    cursor: pointer;
+    border: 3px solid darkcyan;
+ }
+
+ footer {
+     grid-area: ft;
+     background-color: navy;
+     text-align: center;
+     line-height: 50px;
+     color: floralwhite;
+
+ }
+
+ .main {
+     grid-area: m;
+     background-color: lightseagreen;
+     padding: 2px;
+     overflow: auto;
+     color: mediumvioletred;
+ }
+
+ .extra_skills {
+     padding: 2px;
+     overflow: auto;
+     color: mediumvioletred;
+ }
+
+
+
+ section {
+     grid-area: c;
+     background-color: lightseagreen;
+     color: mediumvioletred;
+ }
+
+ .middle {
+     grid-area: md;
+     background-color: mediumvioletred;
+     color: whitesmoke;
+ }
+
+ .common {
+     padding: 6px;
+     border-radius: 4px;
+
+     font-size: 18px;
+
+ }
+
+ .contact_list ol li {
+     padding: 7px 0px;
+ }
+
+ .list li {
+     padding: 10px;
+     color:darkcyan;
+ }
+
+ .list li:nth-child(odd)
+ {
+    color:darkorchid;
+ }
+
+ .r_img {
+     width: 100%;
+     height: 300px;
+     margin-top: auto;
+     border-radius: 11px;
+     opacity: 0.7;
+ }
+ .fig_cap
+ {
+     width:300px;  color:darkcyan;font-size: 16px;text-align: center;padding: 3px; 
+ }
+
+ 
+
+ @media screen and (max-width:500px) {
+     .container {
+         display: grid;
+         grid-template-columns: 1fr;
+
+         grid-template-areas: "h h h h h h" "m m m m m m" "f f f f f f" "c c c c c c" 'md md md md md md' "img img img img img img" 'ft ft ft ft ft ft';
+     }
+
+     .main {
+         overflow: unset;
+     }
+
+     .cont {
+         overflow: unset;
+     }
+
+     .extra_skills {
+         overflow: unset;
+     }
+
+     .gallery_images_div {
+          
+        grid-template-columns: 1fr  ;
+        
+    }
+    .gallery_img
+    {
+        width: 350px;
+        height: 200px;
+    }
+
+
+ }
+
+ @media screen and (min-width:768px) and (max-width:1000px) {
+     .r_img {
+         height: 190px;
+     }
+
+     .gallery_images_div {
+          
+        grid-template-columns: 1fr 1fr ;
+        
+    }
+    
+ }
