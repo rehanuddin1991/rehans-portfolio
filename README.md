@@ -1,2 +1,2 @@
 live link: 
-https://github.com/rehanuddin1991/rehans-portfolio
+rehanuddin1991.github.io/rehans-portfolio
